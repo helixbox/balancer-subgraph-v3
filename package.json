@@ -5,7 +5,13 @@
     "generate-manifests": "node scripts/generate-manifests.js",
     "pools": "pnpm --filter @subgraphs/pools",
     "vault": "pnpm --filter @subgraphs/vault",
-    "codegen": "pnpm -r codegen subgraph.sepolia.yaml"
+    "codegen": "pnpm -r codegen subgraph.crab.yaml",
+    "create:pools-crab": "graph create helixbox/v3-pools --node https://thegraph-g2.darwinia.network/training/deploy/",
+    "deploy:pools-crab": "graph deploy helixbox/v3-pools --node https://thegraph-g2.darwinia.network/training/deploy/ ./subgraphs/v3-pools/subgraph.crab.yaml",
+    "remove:pools-crab": "graph deploy helixbox/v3-pools --node https://thegraph-g2.darwinia.network/training/deploy/",
+    "create:vault-crab": "graph create helixbox/v3-vault --node https://thegraph-g2.darwinia.network/training/deploy/",
+    "deploy:vault-crab": "graph deploy helixbox/v3-vault --node https://thegraph-g2.darwinia.network/training/deploy/  ./subgraphs/v3-vault/subgraph.crab.yaml",
+    "remove:vault-crab": "graph deploy helixbox/v3-vault --node https://thegraph-g2.darwinia.network/training/deploy/"
   },
   "devDependencies": {
     "js-yaml": "^4.1.0"
